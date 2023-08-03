@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: <Image>
+    volumeMounts:
+      - name: koti-vol
+      mountPath:  /etc/koti
+      volumes:
+        - name:  name of the volume
+        mountPath:  Path to mount
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: <Port>
